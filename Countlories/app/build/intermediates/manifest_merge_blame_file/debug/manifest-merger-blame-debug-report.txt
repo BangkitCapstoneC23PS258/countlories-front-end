@@ -1,0 +1,181 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.countlories"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:5:5-67
+11-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <uses-feature android:name="android.hardware.camera" />
+13-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:7:5-60
+13-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:7:19-57
+14
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:9:5-65
+15-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:9:22-62
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:10:5-80
+16-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:10:22-77
+17    <uses-permission
+17-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:11:5-13:38
+18        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+18-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:12:9-65
+19        android:maxSdkVersion="18" />
+19-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:13:9-35
+20
+21    <permission
+21-->[androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+22        android:name="com.example.countlories.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+22-->[androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+23        android:protectionLevel="signature" />
+23-->[androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+24
+25    <uses-permission android:name="com.example.countlories.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+25-->[androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+26
+27    <application
+27-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:15:5-44:19
+28        android:allowBackup="true"
+28-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:16:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+30        android:dataExtractionRules="@xml/data_extraction_rules"
+30-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:17:9-65
+31        android:debuggable="true"
+32        android:fullBackupContent="@xml/backup_rules"
+32-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:18:9-54
+33        android:icon="@mipmap/ic_launcher"
+33-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:19:9-43
+34        android:label="@string/app_name"
+34-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:20:9-41
+35        android:supportsRtl="true"
+35-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:21:9-35
+36        android:testOnly="true"
+37        android:theme="@style/Theme.Countlories" >
+37-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:22:9-49
+38        <provider
+38-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:25:9-33:20
+39            android:name="androidx.core.content.FileProvider"
+39-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:26:13-62
+40            android:authorities="com.example.countlories"
+40-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:27:13-58
+41            android:exported="false"
+41-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:28:13-37
+42            android:grantUriPermissions="true" >
+42-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:29:13-47
+43            <meta-data
+43-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:30:13-32:54
+44                android:name="android.support.FILE_PROVIDER_PATHS"
+44-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:31:17-67
+45                android:resource="@xml/file_paths" />
+45-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:32:17-51
+46        </provider>
+47
+48        <activity
+48-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:35:9-43:20
+49            android:name="com.example.countlories.MainActivity"
+49-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:36:13-41
+50            android:exported="true" >
+50-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:37:13-36
+51            <intent-filter>
+51-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:38:13-42:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:39:17-69
+52-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:39:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:41:17-77
+54-->E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:41:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.countlories.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20ad2621c51feeeea77ada0966fee930\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\d48065b0fc4edea91ecaf02b48d6c767\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\d48065b0fc4edea91ecaf02b48d6c767\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\d48065b0fc4edea91ecaf02b48d6c767\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+68            <meta-data
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+69-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+70                android:value="androidx.startup" />
+70-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+71        </provider>
+72
+73        <uses-library
+73-->[androidx.window:window:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\25aeb8362de643a18cc9990ba7b629fd\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+74            android:name="androidx.window.extensions"
+74-->[androidx.window:window:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\25aeb8362de643a18cc9990ba7b629fd\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+75            android:required="false" />
+75-->[androidx.window:window:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\25aeb8362de643a18cc9990ba7b629fd\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+76        <uses-library
+76-->[androidx.window:window:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\25aeb8362de643a18cc9990ba7b629fd\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+77            android:name="androidx.window.sidecar"
+77-->[androidx.window:window:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\25aeb8362de643a18cc9990ba7b629fd\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+78            android:required="false" />
+78-->[androidx.window:window:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\25aeb8362de643a18cc9990ba7b629fd\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+79
+80        <receiver
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+81            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+82            android:directBootAware="false"
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+83            android:enabled="true"
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+84            android:exported="true"
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+85            android:permission="android.permission.DUMP" >
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+86            <intent-filter>
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+87                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+88            </intent-filter>
+89            <intent-filter>
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+90                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+91            </intent-filter>
+92            <intent-filter>
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+93                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+94            </intent-filter>
+95            <intent-filter>
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+96                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\dbf53cb445a7422d1c9d095e1c6cd3d3\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+97            </intent-filter>
+98        </receiver>
+99    </application>
+100
+101</manifest>

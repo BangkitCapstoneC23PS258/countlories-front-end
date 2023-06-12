@@ -1,0 +1,178 @@
+[
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_account_circle_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_track_page.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/track_page.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_dot.png.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/dot.png"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/anim_to_bottom_anim.xml.flat",
+        "source": "com.example.countlories.app-main-52:/anim/to_bottom_anim.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_profile_settings.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/profile_settings.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/anim_rotate_open_anim.xml.flat",
+        "source": "com.example.countlories.app-main-52:/anim/rotate_open_anim.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_activity_main.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_arrow_back_ios_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_arrow_back_ios_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_fragment_landing.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/fragment_landing.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_food_temp_img.jpg.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/food_temp_img.jpg"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_image_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/xml_file_paths.xml.flat",
+        "source": "com.example.countlories.app-main-52:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_search_light_blue.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_search_light_blue.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_detail_page.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/detail_page.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/anim_rotate_close_anim.xml.flat",
+        "source": "com.example.countlories.app-main-52:/anim/rotate_close_anim.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_camera_alt_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_camera_alt_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_content_background.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/content_background.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-anydpi-v33/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.countlories.app-pngs-45:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_image_search_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_image_search_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_login_page.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/login_page.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_favorite_border_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_favorite_border_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ellipse_4.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ellipse_4.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_background_radius_blue.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/background_radius_blue.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/xml_backup_rules.xml.flat",
+        "source": "com.example.countlories.app-main-52:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.countlories.app-main-52:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/anim_from_bottom_anim.xml.flat",
+        "source": "com.example.countlories.app-main-52:/anim/from_bottom_anim.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_background_edit_text_search.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/background_edit_text_search.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/layout_register_page.xml.flat",
+        "source": "com.example.countlories.app-main-52:/layout/register_page.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/navigation_nav_graph.xml.flat",
+        "source": "com.example.countlories.app-main-52:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/drawable_ic_baseline_add_24.xml.flat",
+        "source": "com.example.countlories.app-main-52:/drawable/ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "com.example.countlories.app-merged_res-50:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.countlories.app-main-52:/mipmap-xxhdpi/ic_launcher_round.webp"
+    }
+]
