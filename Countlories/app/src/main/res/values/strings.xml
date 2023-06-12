@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Countlories</string>
+    <string name="gender_prompt">Select Gender</string>
+    <string name="personal_da"> Personal Data </string>
+
 </resources>
