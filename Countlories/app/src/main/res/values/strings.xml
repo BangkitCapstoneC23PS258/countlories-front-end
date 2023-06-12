@@ -2,5 +2,10 @@
     <string name="app_name">Countlories</string>
     <string name="gender_prompt">Select Gender</string>
     <string name="personal_da"> Personal Data </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gallery_button">Gallery Button</string>
+    <string name="camera_button">Camera button</string>
+    <string name="media_button">Media Button</string>
 
 </resources>
