@@ -11,7 +11,8 @@ android {
     compileSdk 33
 
     defaultConfig {
-        buildConfigField("String", "BASE_URL", "\"here\"")
+        buildConfigField("String", "BASE_URL", "\"https://capstone-countlories-387914.et.r.appspot.com/\"")
+        buildConfigField("String", "BASE_URL_ML", "\"https://foodclassification-bangkit2023-soak6p7fkq-uc.a.run.app/\"")
         applicationId "com.example.countlories"
         minSdk 21
         targetSdk 33

@@ -26,7 +26,7 @@ public final class FragmentLandingBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final EditText editTextTextPersonName;
+  public final EditText etSearch;
 
   @NonNull
   public final FloatingActionButton fabCamera;
@@ -47,7 +47,7 @@ public final class FragmentLandingBinding implements ViewBinding {
   public final NestedScrollView nestedScrollView;
 
   @NonNull
-  public final ProgressBar progressBar;
+  public final ProgressBar pbLanding;
 
   @NonNull
   public final RecyclerView recyclerView;
@@ -58,21 +58,21 @@ public final class FragmentLandingBinding implements ViewBinding {
   @NonNull
   public final TextView textView5;
 
-  private FragmentLandingBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull EditText editTextTextPersonName, @NonNull FloatingActionButton fabCamera,
-      @NonNull FloatingActionButton fabGallery, @NonNull FloatingActionButton fabMedia,
-      @NonNull ImageView imageView, @NonNull ImageView imageView4,
-      @NonNull NestedScrollView nestedScrollView, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView recyclerView, @NonNull TextView textView, @NonNull TextView textView5) {
+  private FragmentLandingBinding(@NonNull CoordinatorLayout rootView, @NonNull EditText etSearch,
+      @NonNull FloatingActionButton fabCamera, @NonNull FloatingActionButton fabGallery,
+      @NonNull FloatingActionButton fabMedia, @NonNull ImageView imageView,
+      @NonNull ImageView imageView4, @NonNull NestedScrollView nestedScrollView,
+      @NonNull ProgressBar pbLanding, @NonNull RecyclerView recyclerView,
+      @NonNull TextView textView, @NonNull TextView textView5) {
     this.rootView = rootView;
-    this.editTextTextPersonName = editTextTextPersonName;
+    this.etSearch = etSearch;
     this.fabCamera = fabCamera;
     this.fabGallery = fabGallery;
     this.fabMedia = fabMedia;
     this.imageView = imageView;
     this.imageView4 = imageView4;
     this.nestedScrollView = nestedScrollView;
-    this.progressBar = progressBar;
+    this.pbLanding = pbLanding;
     this.recyclerView = recyclerView;
     this.textView = textView;
     this.textView5 = textView5;
@@ -105,9 +105,9 @@ public final class FragmentLandingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.editTextTextPersonName;
-      EditText editTextTextPersonName = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName == null) {
+      id = R.id.et_search;
+      EditText etSearch = ViewBindings.findChildViewById(rootView, id);
+      if (etSearch == null) {
         break missingId;
       }
 
@@ -147,9 +147,9 @@ public final class FragmentLandingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.progressBar;
-      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
-      if (progressBar == null) {
+      id = R.id.pb_landing;
+      ProgressBar pbLanding = ViewBindings.findChildViewById(rootView, id);
+      if (pbLanding == null) {
         break missingId;
       }
 
@@ -171,9 +171,9 @@ public final class FragmentLandingBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLandingBinding((CoordinatorLayout) rootView, editTextTextPersonName,
-          fabCamera, fabGallery, fabMedia, imageView, imageView4, nestedScrollView, progressBar,
-          recyclerView, textView, textView5);
+      return new FragmentLandingBinding((CoordinatorLayout) rootView, etSearch, fabCamera,
+          fabGallery, fabMedia, imageView, imageView4, nestedScrollView, pbLanding, recyclerView,
+          textView, textView5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
