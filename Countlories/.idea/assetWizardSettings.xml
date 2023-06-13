@@ -33,9 +33,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_baseline_image_search_24" />
-                            <entry key="sourceFile" value="E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories" />
+                            <entry key="outputName" value="ic_image_login" />
+                            <entry key="sourceFile" value="C:\Users\Indraaaaaaaaaa\Downloads\undraw_breakfast_psiw.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -2874,6 +2874,8 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable background_edit_text_search
 drawable background_radius_blue
+drawable border_radius_background_gray
+drawable border_radius_background_red
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3082,6 +3084,8 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_cancel
+id btn_save
 id buttonPanel
 id cancel_button
 id center
@@ -3143,7 +3147,6 @@ id easeIn
 id easeInOut
 id easeOut
 id edge
-id editTextTextPersonName
 id edit_query
 id edt_berat
 id edt_tanggal
@@ -3155,9 +3158,13 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id et_email
+id et_password
+id et_search
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_add_track
 id fab_camera
 id fab_gallery
 id fab_media
@@ -3177,6 +3184,11 @@ id floating
 id forever
 id fragmentContainerView
 id fragment_container_view_tag
+id fragment_detail_page
+id fragment_login
+id fragment_profile_settings
+id fragment_register
+id fragment_track_page
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
@@ -3314,11 +3326,11 @@ id parentPanel
 id parentRelative
 id parent_box
 id parent_matrix
-id passwordEditText
 id password_toggle
 id path
 id pathRelative
 id pb_detail
+id pb_landing
 id peekHeight
 id percent
 id personal_da
@@ -3326,7 +3338,6 @@ id pin
 id position
 id postLayout
 id pressed
-id progressBar
 id progressBar2
 id progress_circular
 id progress_horizontal
@@ -3460,6 +3471,8 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id tl_email
+id tl_pass
 id toggle
 id top
 id topPanel
@@ -3486,7 +3499,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id usernameEditText
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -3630,9 +3642,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout detail_page
+layout fragment_detail
 layout fragment_landing
-layout login_page
+layout fragment_login
+layout fragment_register
+layout fragment_settings
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3690,8 +3704,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout profile_settings
-layout register_page
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

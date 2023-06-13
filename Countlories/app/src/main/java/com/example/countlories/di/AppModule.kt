@@ -3,6 +3,7 @@ package com.example.countlories.di
 import com.example.countlories.BuildConfig
 import com.example.countlories.data.remote.MyRepositoryImpl
 import com.example.countlories.data.remote.retrofit.ApiService
+import com.example.countlories.data.remote.retrofit.ApiServiceML
 import com.example.countlories.domain.MyRepository
 import dagger.Module
 import dagger.Provides
@@ -13,6 +14,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -21,7 +23,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesApi1(): ApiService {
+    fun providesApi(): ApiService {
         val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
         val authInterceptor = Interceptor { chain ->
@@ -43,7 +45,31 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRepository(api: ApiService): MyRepository {
-        return MyRepositoryImpl(api)
+    fun providesApiML(): ApiServiceML {
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+        val authInterceptor = Interceptor { chain ->
+            val req = chain.request()
+            val requestHeaders = req.newBuilder()
+                .build()
+            chain.proceed(requestHeaders)
+        }
+        val client = OkHttpClient.Builder()
+            .readTimeout(60, TimeUnit.SECONDS)
+            .connectTimeout(60, TimeUnit.SECONDS)
+            .addInterceptor(interceptor)
+            .build()
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BuildConfig.BASE_URL_ML)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
+            .build()
+        return retrofit.create(ApiServiceML::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRepository(api: ApiService, apiML: ApiServiceML): MyRepository {
+        return MyRepositoryImpl(api,apiML)
     }
 }

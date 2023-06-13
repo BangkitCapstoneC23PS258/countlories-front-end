@@ -3,7 +3,6 @@
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
-        <item>Other</item>
     </string-array>
     <color name="black">#FF000000</color>
     <color name="purple_200">#FFBB86FC</color>

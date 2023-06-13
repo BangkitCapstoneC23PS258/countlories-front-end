@@ -10,5 +10,7 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0";
   // Field from default config.
-  public static final String BASE_URL = "here";
+  public static final String BASE_URL = "https://capstone-countlories-387914.et.r.appspot.com/";
+  // Field from default config.
+  public static final String BASE_URL_ML = "https://foodclassification-bangkit2023-soak6p7fkq-uc.a.run.app/";
 }

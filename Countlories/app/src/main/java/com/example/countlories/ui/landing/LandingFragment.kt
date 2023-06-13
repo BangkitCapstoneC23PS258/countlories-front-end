@@ -5,7 +5,11 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,13 +22,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.fragment.app.activityViewModels
 import com.example.countlories.R
 import com.example.countlories.databinding.FragmentLandingBinding
+import dagger.hilt.android.AndroidEntryPoint
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
+import kotlin.math.log
 
+@AndroidEntryPoint
 class LandingFragment : Fragment(), View.OnClickListener {
     private var _binding: FragmentLandingBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: LandingViewModel by activityViewModels()
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(context,R.anim.rotate_open_anim)}
     private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(context,R.anim.rotate_close_anim)}
@@ -35,6 +48,8 @@ class LandingFragment : Fragment(), View.OnClickListener {
 
     private var getFile: File? = null
     private lateinit var currentPhotoPath: String
+
+    private val mHandler: Handler = Handler()
 
     private val launcherIntentGallery = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -77,7 +92,14 @@ class LandingFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupModel()
         setupButton()
+        setupSearch()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getImagename()
     }
 
     override fun onDestroy() {
@@ -115,6 +137,43 @@ class LandingFragment : Fragment(), View.OnClickListener {
         }
     }
 
+    private fun setupSearch() {
+        binding.etSearch.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (!s?.isEmpty()!!) {
+                    showLoading(true)
+                    mHandler.removeCallbacksAndMessages(null)
+                    mHandler.postDelayed({
+                        Log.d(TAG, "onTextChanged: masuk")
+                    },1000)
+                }
+                else{
+                    showLoading(false)
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+        })
+    }
+
+    private fun setupModel(){
+        viewModel.isLoading.observe(viewLifecycleOwner){
+            showLoading(it)
+        }
+
+        viewModel.foodName.observe(viewLifecycleOwner){
+            showLoading(false)
+            binding.etSearch.setText(it)
+        }
+    }
+
     private fun openGallery() {
         val intent = Intent()
         intent.action = Intent.ACTION_GET_CONTENT
@@ -136,6 +195,19 @@ class LandingFragment : Fragment(), View.OnClickListener {
             currentPhotoPath = it.absolutePath
             intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
             launcherIntentCamera.launch(intent)
+        }
+    }
+
+    private fun getImagename(){
+        if (getFile != null) {
+            val file = reduceFileImage(getFile as File)
+            val requestImageFile = file?.asRequestBody("image/jpeg".toMediaType())
+            val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
+                "my_image",
+                file?.name,
+                requestImageFile!!
+            )
+            viewModel.getNameFromImage(imageMultipart)
         }
     }
 
@@ -173,6 +245,10 @@ class LandingFragment : Fragment(), View.OnClickListener {
 
     private fun toastMaker(msg: String){
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun showLoading(isLoading: Boolean = false) {
+        binding.pbLanding.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     companion object {

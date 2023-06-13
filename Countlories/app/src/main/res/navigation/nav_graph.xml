@@ -9,4 +9,24 @@
         android:id="@+id/landingFragment"
         android:name="com.example.countlories.ui.landing.LandingFragment"
         android:label="LandingFragment" />
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.countlories.ui.auth.fragment_login"
+        android:label="fragment_login" />
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.example.countlories.ui.auth.fragment_register"
+        android:label="fragment_register" />
+    <fragment
+        android:id="@+id/fragment_detail_page"
+        android:name="com.example.countlories.ui.landing.fragment_detail_page"
+        android:label="fragment_detail_page" />
+    <fragment
+        android:id="@+id/fragment_profile_settings"
+        android:name="com.example.countlories.ui.profile.fragment_profile_settings"
+        android:label="fragment_profile_settings" />
+    <fragment
+        android:id="@+id/fragment_track_page"
+        android:name="com.example.countlories.ui.profile.fragment_track_page"
+        android:label="fragment_track_page" />
 </navigation>

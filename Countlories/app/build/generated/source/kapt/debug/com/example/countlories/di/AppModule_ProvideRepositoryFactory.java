@@ -2,6 +2,7 @@
 package com.example.countlories.di;
 
 import com.example.countlories.data.remote.retrofit.ApiService;
+import com.example.countlories.data.remote.retrofit.ApiServiceML;
 import com.example.countlories.domain.MyRepository;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
@@ -20,20 +21,25 @@ import javax.inject.Provider;
 public final class AppModule_ProvideRepositoryFactory implements Factory<MyRepository> {
   private final Provider<ApiService> apiProvider;
 
-  public AppModule_ProvideRepositoryFactory(Provider<ApiService> apiProvider) {
+  private final Provider<ApiServiceML> apiMLProvider;
+
+  public AppModule_ProvideRepositoryFactory(Provider<ApiService> apiProvider,
+      Provider<ApiServiceML> apiMLProvider) {
     this.apiProvider = apiProvider;
+    this.apiMLProvider = apiMLProvider;
   }
 
   @Override
   public MyRepository get() {
-    return provideRepository(apiProvider.get());
+    return provideRepository(apiProvider.get(), apiMLProvider.get());
   }
 
-  public static AppModule_ProvideRepositoryFactory create(Provider<ApiService> apiProvider) {
-    return new AppModule_ProvideRepositoryFactory(apiProvider);
+  public static AppModule_ProvideRepositoryFactory create(Provider<ApiService> apiProvider,
+      Provider<ApiServiceML> apiMLProvider) {
+    return new AppModule_ProvideRepositoryFactory(apiProvider, apiMLProvider);
   }
 
-  public static MyRepository provideRepository(ApiService api) {
-    return Preconditions.checkNotNullFromProvides(AppModule.INSTANCE.provideRepository(api));
+  public static MyRepository provideRepository(ApiService api, ApiServiceML apiML) {
+    return Preconditions.checkNotNullFromProvides(AppModule.INSTANCE.provideRepository(api, apiML));
   }
 }

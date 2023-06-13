@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\179881eac58706b68ea69f9920485c3e\transformed\viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\51a13caa943ad2278fd6c3571bb727ff\transformed\navigation-ui-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\11fab031d988b394431ea409884bc794\transformed\navigation-ui-2.5.3\AndroidManifest.xml:17:1-24:12
@@ -68,22 +68,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\b7fed453ec3676cb925dc90fcf3d6337\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\a988dad888b313dc0dfc8943cb85592f\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.44] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\c2327a612169f4a369d600ee8abfd256\transformed\dagger-lint-aar-2.44\AndroidManifest.xml:16:1-19:12
-INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
 		INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:2:11-69
@@ -110,7 +110,7 @@ ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countl
 	android:name
 		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:12:9-65
 application
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:15:5-44:19
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:15:5-45:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20b1213b46e2eb9d1c12b6e4266948a3\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\20b1213b46e2eb9d1c12b6e4266948a3\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\61d368c26fc8a024d5fcbffc10748ab3\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -136,53 +136,55 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\In
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.10.1] C:\Users\Indraaaaaaaaaa\.gradle\caches\transforms-3\395becf5385449e7acfcecef1d9202c3\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:21:9-35
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:21:9-41
 	android:fullBackupContent
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:18:9-54
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:19:9-54
 	tools:targetApi
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:23:9-29
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:24:9-29
 	android:icon
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:19:9-43
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:20:9-43
 	android:allowBackup
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:22:9-49
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:23:9-49
 	android:dataExtractionRules
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:17:9-65
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:18:9-65
+	android:name
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:16:9-30
 provider#androidx.core.content.FileProvider
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:25:9-33:20
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:grantUriPermissions
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:29:13-47
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:30:13-47
 	android:authorities
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:27:13-58
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:28:13-58
 	android:exported
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:26:13-62
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:27:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:30:13-32:54
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:31:13-33:54
 	android:resource
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:32:17-51
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:33:17-51
 	android:name
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:31:17-67
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:32:17-67
 activity#com.example.countlories.MainActivity
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:35:9-43:20
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:exported
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:38:13-36
 	android:name
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:36:13-41
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:37:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:38:13-42:29
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:39:17-69
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:39:25-66
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml:42:27-74
 uses-sdk
 INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\program\Android Studio Project\kotlin\countlories-front-end\Countlories\app\src\main\AndroidManifest.xml

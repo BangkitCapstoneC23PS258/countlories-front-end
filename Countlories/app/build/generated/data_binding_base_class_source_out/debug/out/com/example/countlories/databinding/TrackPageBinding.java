@@ -25,7 +25,7 @@ public final class TrackPageBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final FloatingActionButton fabMedia;
+  public final FloatingActionButton fabAddTrack;
 
   @NonNull
   public final ImageView imageView;
@@ -64,14 +64,14 @@ public final class TrackPageBinding implements ViewBinding {
   public final TextView textView6;
 
   private TrackPageBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull FloatingActionButton fabMedia, @NonNull ImageView imageView,
+      @NonNull FloatingActionButton fabAddTrack, @NonNull ImageView imageView,
       @NonNull ImageView imageView2, @NonNull ImageView imageView3, @NonNull ImageView imageView4,
       @NonNull NestedScrollView nestedScrollView, @NonNull ProgressBar progressBar2,
       @NonNull RecyclerView recyclerView, @NonNull RecyclerView rvFoodeaten,
       @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView5,
       @NonNull TextView textView6) {
     this.rootView = rootView;
-    this.fabMedia = fabMedia;
+    this.fabAddTrack = fabAddTrack;
     this.imageView = imageView;
     this.imageView2 = imageView2;
     this.imageView3 = imageView3;
@@ -113,9 +113,9 @@ public final class TrackPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.fab_media;
-      FloatingActionButton fabMedia = ViewBindings.findChildViewById(rootView, id);
-      if (fabMedia == null) {
+      id = R.id.fab_add_track;
+      FloatingActionButton fabAddTrack = ViewBindings.findChildViewById(rootView, id);
+      if (fabAddTrack == null) {
         break missingId;
       }
 
@@ -191,7 +191,7 @@ public final class TrackPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TrackPageBinding((CoordinatorLayout) rootView, fabMedia, imageView, imageView2,
+      return new TrackPageBinding((CoordinatorLayout) rootView, fabAddTrack, imageView, imageView2,
           imageView3, imageView4, nestedScrollView, progressBar2, recyclerView, rvFoodeaten,
           textView2, textView3, textView5, textView6);
     }
