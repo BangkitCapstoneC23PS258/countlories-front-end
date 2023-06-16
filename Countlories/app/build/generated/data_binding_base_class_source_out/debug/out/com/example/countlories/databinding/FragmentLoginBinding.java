@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -29,7 +32,16 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final TextInputEditText etPassword;
 
   @NonNull
+  public final ImageView imageView6;
+
+  @NonNull
   public final Button loginButton;
+
+  @NonNull
+  public final ProgressBar pbLogin;
+
+  @NonNull
+  public final TextView textView7;
 
   @NonNull
   public final MyEmailEditText tlEmail;
@@ -37,16 +49,24 @@ public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   public final MyPasswordEditText tlPass;
 
+  @NonNull
+  public final TextView tvRegister;
+
   private FragmentLoginBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextInputEditText etEmail, @NonNull TextInputEditText etPassword,
-      @NonNull Button loginButton, @NonNull MyEmailEditText tlEmail,
-      @NonNull MyPasswordEditText tlPass) {
+      @NonNull ImageView imageView6, @NonNull Button loginButton, @NonNull ProgressBar pbLogin,
+      @NonNull TextView textView7, @NonNull MyEmailEditText tlEmail,
+      @NonNull MyPasswordEditText tlPass, @NonNull TextView tvRegister) {
     this.rootView = rootView;
     this.etEmail = etEmail;
     this.etPassword = etPassword;
+    this.imageView6 = imageView6;
     this.loginButton = loginButton;
+    this.pbLogin = pbLogin;
+    this.textView7 = textView7;
     this.tlEmail = tlEmail;
     this.tlPass = tlPass;
+    this.tvRegister = tvRegister;
   }
 
   @Override
@@ -88,9 +108,27 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.loginButton;
+      id = R.id.imageView6;
+      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView6 == null) {
+        break missingId;
+      }
+
+      id = R.id.login_button;
       Button loginButton = ViewBindings.findChildViewById(rootView, id);
       if (loginButton == null) {
+        break missingId;
+      }
+
+      id = R.id.pb_login;
+      ProgressBar pbLogin = ViewBindings.findChildViewById(rootView, id);
+      if (pbLogin == null) {
+        break missingId;
+      }
+
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
         break missingId;
       }
 
@@ -106,8 +144,14 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((ConstraintLayout) rootView, etEmail, etPassword, loginButton,
-          tlEmail, tlPass);
+      id = R.id.tv_register;
+      TextView tvRegister = ViewBindings.findChildViewById(rootView, id);
+      if (tvRegister == null) {
+        break missingId;
+      }
+
+      return new FragmentLoginBinding((ConstraintLayout) rootView, etEmail, etPassword, imageView6,
+          loginButton, pbLogin, textView7, tlEmail, tlPass, tvRegister);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

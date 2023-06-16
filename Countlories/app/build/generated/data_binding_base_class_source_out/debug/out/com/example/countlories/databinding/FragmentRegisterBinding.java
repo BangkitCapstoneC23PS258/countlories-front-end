@@ -5,51 +5,89 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.dicoding.countlories.ui.customView.MyEmailEditText;
+import com.dicoding.countlories.ui.customView.MyPasswordEditText;
 import com.example.countlories.R;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentRegisterBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
+
+  @NonNull
+  public final TextInputEditText etEmail;
+
+  @NonNull
+  public final TextInputEditText etPassword;
+
+  @NonNull
+  public final TextInputEditText etUsername;
+
+  @NonNull
+  public final ImageView imageView6;
+
+  @NonNull
+  public final NestedScrollView nestedScrollView;
+
+  @NonNull
+  public final ProgressBar pbRegister;
 
   @NonNull
   public final Button registerButton;
 
   @NonNull
-  public final EditText registerConfirmPassword;
+  public final TextView textView7;
 
   @NonNull
-  public final EditText registerEmail;
+  public final MyEmailEditText tlEmail;
 
   @NonNull
-  public final EditText registerPassword;
+  public final MyPasswordEditText tlPass;
 
   @NonNull
-  public final EditText registerUsername;
+  public final TextInputLayout tlUsername;
 
-  private FragmentRegisterBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button registerButton, @NonNull EditText registerConfirmPassword,
-      @NonNull EditText registerEmail, @NonNull EditText registerPassword,
-      @NonNull EditText registerUsername) {
+  @NonNull
+  public final TextView tvLogin;
+
+  private FragmentRegisterBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull TextInputEditText etEmail, @NonNull TextInputEditText etPassword,
+      @NonNull TextInputEditText etUsername, @NonNull ImageView imageView6,
+      @NonNull NestedScrollView nestedScrollView, @NonNull ProgressBar pbRegister,
+      @NonNull Button registerButton, @NonNull TextView textView7, @NonNull MyEmailEditText tlEmail,
+      @NonNull MyPasswordEditText tlPass, @NonNull TextInputLayout tlUsername,
+      @NonNull TextView tvLogin) {
     this.rootView = rootView;
+    this.etEmail = etEmail;
+    this.etPassword = etPassword;
+    this.etUsername = etUsername;
+    this.imageView6 = imageView6;
+    this.nestedScrollView = nestedScrollView;
+    this.pbRegister = pbRegister;
     this.registerButton = registerButton;
-    this.registerConfirmPassword = registerConfirmPassword;
-    this.registerEmail = registerEmail;
-    this.registerPassword = registerPassword;
-    this.registerUsername = registerUsername;
+    this.textView7 = textView7;
+    this.tlEmail = tlEmail;
+    this.tlPass = tlPass;
+    this.tlUsername = tlUsername;
+    this.tvLogin = tvLogin;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -74,38 +112,81 @@ public final class FragmentRegisterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.registerButton;
+      id = R.id.et_email;
+      TextInputEditText etEmail = ViewBindings.findChildViewById(rootView, id);
+      if (etEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.et_password;
+      TextInputEditText etPassword = ViewBindings.findChildViewById(rootView, id);
+      if (etPassword == null) {
+        break missingId;
+      }
+
+      id = R.id.et_username;
+      TextInputEditText etUsername = ViewBindings.findChildViewById(rootView, id);
+      if (etUsername == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView6;
+      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView6 == null) {
+        break missingId;
+      }
+
+      id = R.id.nestedScrollView;
+      NestedScrollView nestedScrollView = ViewBindings.findChildViewById(rootView, id);
+      if (nestedScrollView == null) {
+        break missingId;
+      }
+
+      id = R.id.pb_register;
+      ProgressBar pbRegister = ViewBindings.findChildViewById(rootView, id);
+      if (pbRegister == null) {
+        break missingId;
+      }
+
+      id = R.id.register_button;
       Button registerButton = ViewBindings.findChildViewById(rootView, id);
       if (registerButton == null) {
         break missingId;
       }
 
-      id = R.id.registerConfirmPassword;
-      EditText registerConfirmPassword = ViewBindings.findChildViewById(rootView, id);
-      if (registerConfirmPassword == null) {
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
         break missingId;
       }
 
-      id = R.id.registerEmail;
-      EditText registerEmail = ViewBindings.findChildViewById(rootView, id);
-      if (registerEmail == null) {
+      id = R.id.tl_email;
+      MyEmailEditText tlEmail = ViewBindings.findChildViewById(rootView, id);
+      if (tlEmail == null) {
         break missingId;
       }
 
-      id = R.id.registerPassword;
-      EditText registerPassword = ViewBindings.findChildViewById(rootView, id);
-      if (registerPassword == null) {
+      id = R.id.tl_pass;
+      MyPasswordEditText tlPass = ViewBindings.findChildViewById(rootView, id);
+      if (tlPass == null) {
         break missingId;
       }
 
-      id = R.id.registerUsername;
-      EditText registerUsername = ViewBindings.findChildViewById(rootView, id);
-      if (registerUsername == null) {
+      id = R.id.tl_username;
+      TextInputLayout tlUsername = ViewBindings.findChildViewById(rootView, id);
+      if (tlUsername == null) {
         break missingId;
       }
 
-      return new FragmentRegisterBinding((ConstraintLayout) rootView, registerButton,
-          registerConfirmPassword, registerEmail, registerPassword, registerUsername);
+      id = R.id.tv_login;
+      TextView tvLogin = ViewBindings.findChildViewById(rootView, id);
+      if (tvLogin == null) {
+        break missingId;
+      }
+
+      return new FragmentRegisterBinding((CoordinatorLayout) rootView, etEmail, etPassword,
+          etUsername, imageView6, nestedScrollView, pbRegister, registerButton, textView7, tlEmail,
+          tlPass, tlUsername, tvLogin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

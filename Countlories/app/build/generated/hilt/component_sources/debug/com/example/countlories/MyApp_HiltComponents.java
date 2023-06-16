@@ -2,6 +2,8 @@ package com.example.countlories;
 
 import com.example.countlories.di.AppModule;
 import com.example.countlories.ui.auth.AuthViewModel_HiltModules;
+import com.example.countlories.ui.auth.LoginFragment_GeneratedInjector;
+import com.example.countlories.ui.landing.DetailFoodFragment_GeneratedInjector;
 import com.example.countlories.ui.landing.LandingFragment_GeneratedInjector;
 import com.example.countlories.ui.landing.LandingViewModel_HiltModules;
 import dagger.Binds;
@@ -212,7 +214,9 @@ public final class MyApp_HiltComponents {
       modules = ViewWithFragmentCBuilderModule.class
   )
   @FragmentScoped
-  public abstract static class FragmentC implements LandingFragment_GeneratedInjector,
+  public abstract static class FragmentC implements LoginFragment_GeneratedInjector,
+      DetailFoodFragment_GeneratedInjector,
+      LandingFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

@@ -30,7 +30,7 @@ public final class FragmentDetailBinding implements ViewBinding {
   public final ConstraintLayout constraintLayout;
 
   @NonNull
-  public final FloatingActionButton fabMedia;
+  public final FloatingActionButton fabAddTrack;
 
   @NonNull
   public final ImageView imageView4;
@@ -39,10 +39,13 @@ public final class FragmentDetailBinding implements ViewBinding {
   public final ImageView imageView5;
 
   @NonNull
-  public final ImageView imageView7;
+  public final ImageView ivBack;
 
   @NonNull
-  public final ImageView imageView8;
+  public final ImageView ivFavorite;
+
+  @NonNull
+  public final ImageView ivFood;
 
   @NonNull
   public final NestedScrollView nestedScrollView;
@@ -54,13 +57,13 @@ public final class FragmentDetailBinding implements ViewBinding {
   public final ProgressBar pbDetail;
 
   @NonNull
-  public final RecyclerView recyclerView;
+  public final RecyclerView rvLanding;
 
   @NonNull
-  public final TextView textView4;
+  public final TextView tvDesc;
 
   @NonNull
-  public final TextView textView5;
+  public final TextView tvName;
 
   @NonNull
   public final TextView tvNumCal;
@@ -90,28 +93,29 @@ public final class FragmentDetailBinding implements ViewBinding {
   public final TextView tvTextProtein;
 
   private FragmentDetailBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull ConstraintLayout constraintLayout, @NonNull FloatingActionButton fabMedia,
-      @NonNull ImageView imageView4, @NonNull ImageView imageView5, @NonNull ImageView imageView7,
-      @NonNull ImageView imageView8, @NonNull NestedScrollView nestedScrollView,
-      @NonNull LinearLayout parentBox, @NonNull ProgressBar pbDetail,
-      @NonNull RecyclerView recyclerView, @NonNull TextView textView4, @NonNull TextView textView5,
-      @NonNull TextView tvNumCal, @NonNull TextView tvNumCarb, @NonNull TextView tvNumFat,
-      @NonNull TextView tvNumProtein, @NonNull TextView tvRecomendation,
+      @NonNull ConstraintLayout constraintLayout, @NonNull FloatingActionButton fabAddTrack,
+      @NonNull ImageView imageView4, @NonNull ImageView imageView5, @NonNull ImageView ivBack,
+      @NonNull ImageView ivFavorite, @NonNull ImageView ivFood,
+      @NonNull NestedScrollView nestedScrollView, @NonNull LinearLayout parentBox,
+      @NonNull ProgressBar pbDetail, @NonNull RecyclerView rvLanding, @NonNull TextView tvDesc,
+      @NonNull TextView tvName, @NonNull TextView tvNumCal, @NonNull TextView tvNumCarb,
+      @NonNull TextView tvNumFat, @NonNull TextView tvNumProtein, @NonNull TextView tvRecomendation,
       @NonNull TextView tvTextCal, @NonNull TextView tvTextCarb, @NonNull TextView tvTextFat,
       @NonNull TextView tvTextProtein) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
-    this.fabMedia = fabMedia;
+    this.fabAddTrack = fabAddTrack;
     this.imageView4 = imageView4;
     this.imageView5 = imageView5;
-    this.imageView7 = imageView7;
-    this.imageView8 = imageView8;
+    this.ivBack = ivBack;
+    this.ivFavorite = ivFavorite;
+    this.ivFood = ivFood;
     this.nestedScrollView = nestedScrollView;
     this.parentBox = parentBox;
     this.pbDetail = pbDetail;
-    this.recyclerView = recyclerView;
-    this.textView4 = textView4;
-    this.textView5 = textView5;
+    this.rvLanding = rvLanding;
+    this.tvDesc = tvDesc;
+    this.tvName = tvName;
     this.tvNumCal = tvNumCal;
     this.tvNumCarb = tvNumCarb;
     this.tvNumFat = tvNumFat;
@@ -156,9 +160,9 @@ public final class FragmentDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.fab_media;
-      FloatingActionButton fabMedia = ViewBindings.findChildViewById(rootView, id);
-      if (fabMedia == null) {
+      id = R.id.fab_add_track;
+      FloatingActionButton fabAddTrack = ViewBindings.findChildViewById(rootView, id);
+      if (fabAddTrack == null) {
         break missingId;
       }
 
@@ -174,15 +178,21 @@ public final class FragmentDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView7;
-      ImageView imageView7 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView7 == null) {
+      id = R.id.iv_back;
+      ImageView ivBack = ViewBindings.findChildViewById(rootView, id);
+      if (ivBack == null) {
         break missingId;
       }
 
-      id = R.id.imageView8;
-      ImageView imageView8 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView8 == null) {
+      id = R.id.iv_favorite;
+      ImageView ivFavorite = ViewBindings.findChildViewById(rootView, id);
+      if (ivFavorite == null) {
+        break missingId;
+      }
+
+      id = R.id.iv_food;
+      ImageView ivFood = ViewBindings.findChildViewById(rootView, id);
+      if (ivFood == null) {
         break missingId;
       }
 
@@ -204,21 +214,21 @@ public final class FragmentDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recyclerView;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
+      id = R.id.rv_landing;
+      RecyclerView rvLanding = ViewBindings.findChildViewById(rootView, id);
+      if (rvLanding == null) {
         break missingId;
       }
 
-      id = R.id.textView4;
-      TextView textView4 = ViewBindings.findChildViewById(rootView, id);
-      if (textView4 == null) {
+      id = R.id.tv_desc;
+      TextView tvDesc = ViewBindings.findChildViewById(rootView, id);
+      if (tvDesc == null) {
         break missingId;
       }
 
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
+      id = R.id.tv_name;
+      TextView tvName = ViewBindings.findChildViewById(rootView, id);
+      if (tvName == null) {
         break missingId;
       }
 
@@ -276,10 +286,10 @@ public final class FragmentDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDetailBinding((CoordinatorLayout) rootView, constraintLayout, fabMedia,
-          imageView4, imageView5, imageView7, imageView8, nestedScrollView, parentBox, pbDetail,
-          recyclerView, textView4, textView5, tvNumCal, tvNumCarb, tvNumFat, tvNumProtein,
-          tvRecomendation, tvTextCal, tvTextCarb, tvTextFat, tvTextProtein);
+      return new FragmentDetailBinding((CoordinatorLayout) rootView, constraintLayout, fabAddTrack,
+          imageView4, imageView5, ivBack, ivFavorite, ivFood, nestedScrollView, parentBox, pbDetail,
+          rvLanding, tvDesc, tvName, tvNumCal, tvNumCarb, tvNumFat, tvNumProtein, tvRecomendation,
+          tvTextCal, tvTextCarb, tvTextFat, tvTextProtein);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

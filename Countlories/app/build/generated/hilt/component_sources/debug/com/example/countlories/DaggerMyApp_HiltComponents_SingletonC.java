@@ -17,9 +17,14 @@ import com.example.countlories.domain.MyRepository;
 import com.example.countlories.helper.LoginPreferences;
 import com.example.countlories.ui.auth.AuthViewModel;
 import com.example.countlories.ui.auth.AuthViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.example.countlories.ui.auth.LoginFragment;
+import com.example.countlories.ui.auth.LoginFragment_MembersInjector;
+import com.example.countlories.ui.landing.DetailFoodFragment;
 import com.example.countlories.ui.landing.LandingFragment;
+import com.example.countlories.ui.landing.LandingFragment_MembersInjector;
 import com.example.countlories.ui.landing.LandingViewModel;
 import com.example.countlories.ui.landing.LandingViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.flags.HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
@@ -324,7 +329,17 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
     }
 
     @Override
+    public void injectLoginFragment(LoginFragment arg0) {
+      injectLoginFragment2(arg0);
+    }
+
+    @Override
+    public void injectDetailFoodFragment(DetailFoodFragment arg0) {
+    }
+
+    @Override
     public void injectLandingFragment(LandingFragment arg0) {
+      injectLandingFragment2(arg0);
     }
 
     @Override
@@ -335,6 +350,18 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
     @Override
     public ViewWithFragmentComponentBuilder viewWithFragmentComponentBuilder() {
       return new ViewWithFragmentCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl, fragmentCImpl);
+    }
+
+    @CanIgnoreReturnValue
+    private LoginFragment injectLoginFragment2(LoginFragment instance) {
+      LoginFragment_MembersInjector.injectLoginPref(instance, singletonCImpl.loginPreferencesProvider.get());
+      return instance;
+    }
+
+    @CanIgnoreReturnValue
+    private LandingFragment injectLandingFragment2(LandingFragment instance) {
+      LandingFragment_MembersInjector.injectLoginPref(instance, singletonCImpl.loginPreferencesProvider.get());
+      return instance;
     }
   }
 
@@ -460,7 +487,7 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
           return (T) new AuthViewModel(DoubleCheck.lazy(singletonCImpl.provideRepositoryProvider), singletonCImpl.loginPreferencesProvider.get());
 
           case 1: // com.example.countlories.ui.landing.LandingViewModel 
-          return (T) new LandingViewModel(DoubleCheck.lazy(singletonCImpl.provideRepositoryProvider));
+          return (T) new LandingViewModel(DoubleCheck.lazy(singletonCImpl.provideRepositoryProvider), singletonCImpl.loginPreferencesProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -541,13 +568,13 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
 
     private final SingletonCImpl singletonCImpl = this;
 
+    private Provider<LoginPreferences> loginPreferencesProvider;
+
     private Provider<ApiService> providesApiProvider;
 
     private Provider<ApiServiceML> providesApiMLProvider;
 
     private Provider<MyRepository> provideRepositoryProvider;
-
-    private Provider<LoginPreferences> loginPreferencesProvider;
 
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
@@ -557,10 +584,10 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
 
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
-      this.providesApiProvider = DoubleCheck.provider(new SwitchingProvider<ApiService>(singletonCImpl, 1));
-      this.providesApiMLProvider = DoubleCheck.provider(new SwitchingProvider<ApiServiceML>(singletonCImpl, 2));
-      this.provideRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<MyRepository>(singletonCImpl, 0));
-      this.loginPreferencesProvider = DoubleCheck.provider(new SwitchingProvider<LoginPreferences>(singletonCImpl, 3));
+      this.loginPreferencesProvider = DoubleCheck.provider(new SwitchingProvider<LoginPreferences>(singletonCImpl, 0));
+      this.providesApiProvider = DoubleCheck.provider(new SwitchingProvider<ApiService>(singletonCImpl, 2));
+      this.providesApiMLProvider = DoubleCheck.provider(new SwitchingProvider<ApiServiceML>(singletonCImpl, 3));
+      this.provideRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<MyRepository>(singletonCImpl, 1));
     }
 
     @Override
@@ -596,17 +623,17 @@ public final class DaggerMyApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.example.countlories.domain.MyRepository 
+          case 0: // com.example.countlories.helper.LoginPreferences 
+          return (T) new LoginPreferences(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
+
+          case 1: // com.example.countlories.domain.MyRepository 
           return (T) AppModule_ProvideRepositoryFactory.provideRepository(singletonCImpl.providesApiProvider.get(), singletonCImpl.providesApiMLProvider.get());
 
-          case 1: // com.example.countlories.data.remote.retrofit.ApiService 
+          case 2: // com.example.countlories.data.remote.retrofit.ApiService 
           return (T) AppModule_ProvidesApiFactory.providesApi();
 
-          case 2: // com.example.countlories.data.remote.retrofit.ApiServiceML 
+          case 3: // com.example.countlories.data.remote.retrofit.ApiServiceML 
           return (T) AppModule_ProvidesApiMLFactory.providesApiML();
-
-          case 3: // com.example.countlories.helper.LoginPreferences 
-          return (T) new LoginPreferences(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);
         }
