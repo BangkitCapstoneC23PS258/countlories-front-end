@@ -46,10 +46,10 @@ public final class TrackPageBinding implements ViewBinding {
   public final ProgressBar progressBar2;
 
   @NonNull
-  public final RecyclerView recyclerView;
+  public final RecyclerView rvFoodeaten;
 
   @NonNull
-  public final RecyclerView rvFoodeaten;
+  public final RecyclerView rvLanding;
 
   @NonNull
   public final TextView textView2;
@@ -58,18 +58,18 @@ public final class TrackPageBinding implements ViewBinding {
   public final TextView textView3;
 
   @NonNull
-  public final TextView textView5;
+  public final TextView textView6;
 
   @NonNull
-  public final TextView textView6;
+  public final TextView tvName;
 
   private TrackPageBinding(@NonNull CoordinatorLayout rootView,
       @NonNull FloatingActionButton fabAddTrack, @NonNull ImageView imageView,
       @NonNull ImageView imageView2, @NonNull ImageView imageView3, @NonNull ImageView imageView4,
       @NonNull NestedScrollView nestedScrollView, @NonNull ProgressBar progressBar2,
-      @NonNull RecyclerView recyclerView, @NonNull RecyclerView rvFoodeaten,
-      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView5,
-      @NonNull TextView textView6) {
+      @NonNull RecyclerView rvFoodeaten, @NonNull RecyclerView rvLanding,
+      @NonNull TextView textView2, @NonNull TextView textView3, @NonNull TextView textView6,
+      @NonNull TextView tvName) {
     this.rootView = rootView;
     this.fabAddTrack = fabAddTrack;
     this.imageView = imageView;
@@ -78,12 +78,12 @@ public final class TrackPageBinding implements ViewBinding {
     this.imageView4 = imageView4;
     this.nestedScrollView = nestedScrollView;
     this.progressBar2 = progressBar2;
-    this.recyclerView = recyclerView;
     this.rvFoodeaten = rvFoodeaten;
+    this.rvLanding = rvLanding;
     this.textView2 = textView2;
     this.textView3 = textView3;
-    this.textView5 = textView5;
     this.textView6 = textView6;
+    this.tvName = tvName;
   }
 
   @Override
@@ -155,15 +155,15 @@ public final class TrackPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recyclerView;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
-        break missingId;
-      }
-
       id = R.id.rv_foodeaten;
       RecyclerView rvFoodeaten = ViewBindings.findChildViewById(rootView, id);
       if (rvFoodeaten == null) {
+        break missingId;
+      }
+
+      id = R.id.rv_landing;
+      RecyclerView rvLanding = ViewBindings.findChildViewById(rootView, id);
+      if (rvLanding == null) {
         break missingId;
       }
 
@@ -179,21 +179,21 @@ public final class TrackPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
-        break missingId;
-      }
-
       id = R.id.textView6;
       TextView textView6 = ViewBindings.findChildViewById(rootView, id);
       if (textView6 == null) {
         break missingId;
       }
 
+      id = R.id.tv_name;
+      TextView tvName = ViewBindings.findChildViewById(rootView, id);
+      if (tvName == null) {
+        break missingId;
+      }
+
       return new TrackPageBinding((CoordinatorLayout) rootView, fabAddTrack, imageView, imageView2,
-          imageView3, imageView4, nestedScrollView, progressBar2, recyclerView, rvFoodeaten,
-          textView2, textView3, textView5, textView6);
+          imageView3, imageView4, nestedScrollView, progressBar2, rvFoodeaten, rvLanding, textView2,
+          textView3, textView6, tvName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

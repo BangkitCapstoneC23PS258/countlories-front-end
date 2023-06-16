@@ -23,14 +23,20 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.countlories.R
+import com.example.countlories.data.remote.response.OutputItem
 import com.example.countlories.databinding.FragmentLandingBinding
+import com.example.countlories.helper.LoginPreferences
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
-import kotlin.math.log
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LandingFragment : Fragment(), View.OnClickListener {
@@ -38,6 +44,9 @@ class LandingFragment : Fragment(), View.OnClickListener {
     private val binding get() = _binding!!
 
     private val viewModel: LandingViewModel by activityViewModels()
+
+    @Inject
+    lateinit var loginPref: LoginPreferences
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(context,R.anim.rotate_open_anim)}
     private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(context,R.anim.rotate_close_anim)}
@@ -86,6 +95,10 @@ class LandingFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        if (!loginPref.isLogin()) {
+            findNavController().navigate(R.id.action_landingFragment_to_fragment_login)
+        }
+        viewModel.getAllFood()
         _binding = FragmentLandingBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -95,8 +108,8 @@ class LandingFragment : Fragment(), View.OnClickListener {
         setupModel()
         setupButton()
         setupSearch()
+        setupRecyclerView()
     }
-
     override fun onResume() {
         super.onResume()
         getImagename()
@@ -148,10 +161,11 @@ class LandingFragment : Fragment(), View.OnClickListener {
                     showLoading(true)
                     mHandler.removeCallbacksAndMessages(null)
                     mHandler.postDelayed({
-                        Log.d(TAG, "onTextChanged: masuk")
+                        viewModel.getFoodByName(s.toString())
                     },1000)
                 }
                 else{
+                    viewModel.getAllFood()
                     showLoading(false)
                 }
             }
@@ -172,6 +186,33 @@ class LandingFragment : Fragment(), View.OnClickListener {
             showLoading(false)
             binding.etSearch.setText(it)
         }
+
+        viewModel.listFood.observe(viewLifecycleOwner){
+            setFood(it)
+            Log.d(TAG, "setupModel: $it")
+        }
+    }
+
+    private fun setFood(listFood: List<OutputItem>) {
+        if(listFood.isEmpty())
+            toastMaker("Makanan tidak ditemukan")
+        val adapter = MainAdapter(listFood)
+        binding.rvLanding.adapter = adapter
+        adapter.setOnClickCallback(object : MainAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: OutputItem, holder: MainAdapter.ViewHolder) {
+                    val direction = LandingFragmentDirections.actionLandingFragmentToFragmentDetailPage(
+                        data.foodPhoto,data.foodName,data.descFood,data.calories,data.fat,data.carb,data.protein,data.foodId.toString()
+                    )
+                    findNavController().navigate(direction)
+            }
+        })
+    }
+
+    private fun setupRecyclerView(){
+        val layoutManager = LinearLayoutManager(context)
+        binding.rvLanding.layoutManager = layoutManager
+        val itemDecoration = DividerItemDecoration(context,layoutManager.orientation)
+        binding.rvLanding.addItemDecoration(itemDecoration)
     }
 
     private fun openGallery() {
@@ -200,7 +241,7 @@ class LandingFragment : Fragment(), View.OnClickListener {
 
     private fun getImagename(){
         if (getFile != null) {
-            val file = reduceFileImage(getFile as File)
+            val file = getFile
             val requestImageFile = file?.asRequestBody("image/jpeg".toMediaType())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
                 "my_image",
@@ -208,6 +249,7 @@ class LandingFragment : Fragment(), View.OnClickListener {
                 requestImageFile!!
             )
             viewModel.getNameFromImage(imageMultipart)
+            getFile = null
         }
     }
 

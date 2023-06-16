@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":[]}]
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.example.countlories.ui.landing.LandingFragmentDirections","com.example.countlories.ui.auth.LoginFragmentDirections","com.example.countlories.ui.auth.RegisterFragmentDirections","com.example.countlories.ui.landing.DetailFoodFragmentDirections","com.example.countlories.ui.landing.DetailFoodFragmentArgs"]}]

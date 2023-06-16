@@ -15,21 +15,22 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/iv_food"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:adjustViewBounds="true"
                 android:backgroundTintMode="screen"
-                android:scaleType="fitCenter"
-                app:tint="#808AABF2"
+                android:scaleType="centerCrop"
                 android:tintMode="src_over"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:tint="#808AABF2"
                 tools:srcCompat="@drawable/food_temp_img" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/iv_back"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="24dp"
@@ -38,67 +39,74 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_food"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/content_background" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-60dp"
-                android:background="@drawable/content_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView5">
+                app:layout_constraintTop_toBottomOf="@id/iv_food">
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_desc"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="32dp"
+                    android:lineSpacingExtra="8sp"
                     android:text="Something / Something"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="@+id/textView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_favorite"
+                    app:layout_constraintStart_toStartOf="@+id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="60dp"
                     android:fontFamily="sans-serif-black"
                     android:text="Something \nFood"
                     android:textAlignment="textStart"
-                    android:textSize="16sp"
+                    android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/iv_favorite"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="60dp"
                     android:layout_marginEnd="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_baseline_favorite_border_24"
-                    app:tint="#3E3E3E" />
+                    app:tint="#89AAF1" />
 
                 <LinearLayout
                     android:id="@+id/parent_box"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="50dp"
                     android:layout_marginEnd="24dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView4">
+                    app:layout_constraintTop_toBottomOf="@id/tv_desc">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_radius_blue"
                         android:orientation="vertical"
@@ -109,8 +117,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
-                            android:text="89"
-                            android:textSize="24sp"
+                            android:text="160"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:typeface="normal" />
 
@@ -119,14 +128,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
-                            android:text="Calories" />
+                            android:text="Calories"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_radius_blue"
                         android:orientation="vertical"
@@ -138,7 +149,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
                             android:text="89"
-                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:typeface="normal" />
 
@@ -147,14 +159,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
-                            android:text="Fat" />
+                            android:text="Fat"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_radius_blue"
                         android:orientation="vertical"
@@ -166,7 +180,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
                             android:text="89"
-                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:typeface="normal" />
 
@@ -175,14 +190,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
-                            android:text="Carb" />
+                            android:text="Carb"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/background_radius_blue"
                         android:orientation="vertical"
@@ -194,7 +211,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
                             android:text="89"
-                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:typeface="normal" />
 
@@ -203,7 +221,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|center_horizontal"
-                            android:text="Protein" />
+                            android:text="Protein"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -221,9 +241,9 @@
                         android:id="@+id/tv_recomendation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="50dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Todays \nRecomendation"
+                        android:text="Other  \nFood"
                         android:textAlignment="center"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +264,7 @@
                         app:srcCompat="@drawable/dot" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
+                        android:id="@+id/rv_landing"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
@@ -264,7 +284,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_media"
+        android:id="@+id/fab_add_track"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
