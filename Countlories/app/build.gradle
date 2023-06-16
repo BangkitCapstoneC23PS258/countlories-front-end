@@ -69,4 +69,7 @@ dependencies {
     // Dagger
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    // View Pager & tabLayout
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
 }
