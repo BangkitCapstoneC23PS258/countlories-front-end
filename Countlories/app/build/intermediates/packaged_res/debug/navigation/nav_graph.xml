@@ -3,24 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/landingFragment">
+    app:startDestination="@id/fragment_login">
 
     <fragment
         android:id="@+id/landingFragment"
         android:name="com.example.countlories.ui.landing.LandingFragment"
-        android:label="LandingFragment" />
+        android:label="LandingFragment" >
+        <action
+            android:id="@+id/action_landingFragment_to_fragment_login"
+            app:destination="@id/fragment_login"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_landingFragment_to_fragment_detail_page"
+            app:destination="@id/fragment_detail_page" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_login"
-        android:name="com.example.countlories.ui.auth.fragment_login"
-        android:label="fragment_login" />
+        android:name="com.example.countlories.ui.auth.LoginFragment"
+        android:label="fragment_login" >
+        <action
+            android:id="@+id/action_fragment_login_to_landingFragment"
+            app:destination="@id/landingFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragment_login"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_register"
+            app:destination="@id/fragment_register"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragment_register" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_register"
-        android:name="com.example.countlories.ui.auth.fragment_register"
-        android:label="fragment_register" />
+        android:name="com.example.countlories.ui.auth.RegisterFragment"
+        android:label="fragment_register" >
+        <action
+            android:id="@+id/action_fragment_register_to_fragment_login"
+            app:destination="@id/fragment_login"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragment_register"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_detail_page"
-        android:name="com.example.countlories.ui.landing.fragment_detail_page"
-        android:label="fragment_detail_page" />
+        android:name="com.example.countlories.ui.landing.DetailFoodFragment"
+        android:label="fragment_detail_page" >
+        <argument android:name="img"
+            app:argType="string" />
+        <argument android:name="food_name"
+            app:argType="string" />
+        <argument
+            android:name="food_desc"
+            app:argType="string" />
+        <argument
+            android:name="food_cal"
+            app:argType="string" />
+        <argument
+            android:name="food_fat"
+            app:argType="string" />
+        <argument
+            android:name="food_carb"
+            app:argType="string" />
+        <argument
+            android:name="food_protein"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragment_detail_page_to_landingFragment"
+            app:destination="@id/landingFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fragment_detail_page"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="food_id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_profile_settings"
         android:name="com.example.countlories.ui.profile.fragment_profile_settings"

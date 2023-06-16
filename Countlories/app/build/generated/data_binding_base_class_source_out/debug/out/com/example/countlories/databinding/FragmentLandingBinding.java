@@ -50,20 +50,20 @@ public final class FragmentLandingBinding implements ViewBinding {
   public final ProgressBar pbLanding;
 
   @NonNull
-  public final RecyclerView recyclerView;
+  public final RecyclerView rvLanding;
 
   @NonNull
   public final TextView textView;
 
   @NonNull
-  public final TextView textView5;
+  public final TextView tvName;
 
   private FragmentLandingBinding(@NonNull CoordinatorLayout rootView, @NonNull EditText etSearch,
       @NonNull FloatingActionButton fabCamera, @NonNull FloatingActionButton fabGallery,
       @NonNull FloatingActionButton fabMedia, @NonNull ImageView imageView,
       @NonNull ImageView imageView4, @NonNull NestedScrollView nestedScrollView,
-      @NonNull ProgressBar pbLanding, @NonNull RecyclerView recyclerView,
-      @NonNull TextView textView, @NonNull TextView textView5) {
+      @NonNull ProgressBar pbLanding, @NonNull RecyclerView rvLanding, @NonNull TextView textView,
+      @NonNull TextView tvName) {
     this.rootView = rootView;
     this.etSearch = etSearch;
     this.fabCamera = fabCamera;
@@ -73,9 +73,9 @@ public final class FragmentLandingBinding implements ViewBinding {
     this.imageView4 = imageView4;
     this.nestedScrollView = nestedScrollView;
     this.pbLanding = pbLanding;
-    this.recyclerView = recyclerView;
+    this.rvLanding = rvLanding;
     this.textView = textView;
-    this.textView5 = textView5;
+    this.tvName = tvName;
   }
 
   @Override
@@ -153,9 +153,9 @@ public final class FragmentLandingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.recyclerView;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
+      id = R.id.rv_landing;
+      RecyclerView rvLanding = ViewBindings.findChildViewById(rootView, id);
+      if (rvLanding == null) {
         break missingId;
       }
 
@@ -165,15 +165,15 @@ public final class FragmentLandingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
+      id = R.id.tv_name;
+      TextView tvName = ViewBindings.findChildViewById(rootView, id);
+      if (tvName == null) {
         break missingId;
       }
 
       return new FragmentLandingBinding((CoordinatorLayout) rootView, etSearch, fabCamera,
-          fabGallery, fabMedia, imageView, imageView4, nestedScrollView, pbLanding, recyclerView,
-          textView, textView5);
+          fabGallery, fabMedia, imageView, imageView4, nestedScrollView, pbLanding, rvLanding,
+          textView, tvName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

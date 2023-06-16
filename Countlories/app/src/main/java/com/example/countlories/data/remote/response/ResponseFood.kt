@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class ResponseFood(
 
 	@field:SerializedName("output")
-	val output: Output,
+	val output: List<OutputItem>,
 
 	@field:SerializedName("message")
 	val message: String,
@@ -14,7 +14,10 @@ data class ResponseFood(
 	val status: String
 )
 
-data class Output(
+data class OutputItem(
+
+	@field:SerializedName("carb")
+	val carb: String,
 
 	@field:SerializedName("food_name")
 	val foodName: String,
@@ -23,13 +26,16 @@ data class Output(
 	val descFood: String,
 
 	@field:SerializedName("protein")
-	val protein: Int,
+	val protein: String,
 
 	@field:SerializedName("fat")
-	val fat: Int,
+	val fat: String,
+
+	@field:SerializedName("food_photo")
+	val foodPhoto: String,
 
 	@field:SerializedName("calories")
-	val calories: Int,
+	val calories: String,
 
 	@field:SerializedName("food_id")
 	val foodId: Int
